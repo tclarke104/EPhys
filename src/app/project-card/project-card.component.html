@@ -1,0 +1,23 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title>
+      {{project.name}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="expanded" >
+    <table *ngIf="experiments$ | async as experiments" class="experiment-table">
+      <tr >
+        <th>
+          Name
+        </th>
+        <th>
+          Date
+        </th>
+      </tr>
+      <tr *ngFor="let experiment of experiments" class="table-row" [routerLink]="['/view', { id: experiment.id }]">
+        <td>{{experiment.name}}</td>
+        <td>{{experiment.created | date}}</td>
+      </tr>
+    </table>
+  </mat-card-content>
+</mat-card>

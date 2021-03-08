@@ -1,0 +1,16 @@
+.project-card {
+  cursor: pointer;
+}
+
+.experiment-table {
+  width: 100%;
+  & tr td {
+    text-align: center;
+  }
+  & tr th {
+    border-bottom: 1px solid black;
+  }
+  .table-row:hover {
+    background-color: #e5e8ee;
+  }
+}

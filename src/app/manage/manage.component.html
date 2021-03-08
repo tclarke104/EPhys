@@ -1,0 +1,12 @@
+<div>
+  <div class="top">
+    <h1>Experiments</h1>
+    <span class="spacer"></span>
+    <button mat-mini-fab color="accent" class="add-button">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="projects">
+    <app-project-card *ngFor="let project of projects" [project]="project" class="project-card"></app-project-card>
+  </div>
+</div>
